@@ -27,7 +27,7 @@ public class EmployeeIMPL implements EmployeeService{
                 employeeDTO.getEmployeeid(),
                 employeeDTO.getEmployeename(),
                 employeeDTO.getEmail(),
-               this.passwordEncoder.encode(employeeDTO.getPassword())
+                this.passwordEncoder.encode(employeeDTO.getPassword())
         );
         employeeRepo.save(employee);
         return employee.getEmployeename();
